@@ -1,0 +1,10 @@
+{
+  "samples": [],
+  "globalSettings": {
+    "useTestlib": true,
+    "spjPath": "",
+    "freopenInputFile": "",
+    "freopenOutputFile": "",
+    "defaultTimeLimit": 1000
+  }
+}

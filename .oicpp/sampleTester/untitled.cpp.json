@@ -1,0 +1,33 @@
+{
+  "samples": [
+    {
+      "id": 1,
+      "inputType": "userinput",
+      "outputType": "userinput",
+      "input": "5\n4\nRR\nRB\nBB\nBR\n3\nRR\nRB\nRR\n3\nRB\nBR\nRB\n4\nRB\nBR\nRB\nBR\n4\nRR\nBB\nRB\nBB\n",
+      "output": "0\n1\n1\n0\n3\n",
+      "timeLimit": 1000,
+      "freopenInputFile": "",
+      "freopenOutputFile": "",
+      "result": {
+        "status": "AC",
+        "output": "0\r\n1\r\n1\r\n0\r\n3\r\n",
+        "expectedOutput": "0\n1\n1\n0\n3\n",
+        "stderr": "",
+        "outputSizeBytes": 15,
+        "outputExpanded": false,
+        "time": 331,
+        "memoryBytes": 0,
+        "usedSpj": false,
+        "spjOutput": ""
+      }
+    }
+  ],
+  "globalSettings": {
+    "useTestlib": false,
+    "spjPath": "",
+    "freopenInputFile": "",
+    "freopenOutputFile": "",
+    "defaultTimeLimit": 1000
+  }
+}

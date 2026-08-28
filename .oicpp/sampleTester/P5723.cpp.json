@@ -1,0 +1,76 @@
+{
+  "samples": [
+    {
+      "id": 1,
+      "title": "样例 1",
+      "input": "100",
+      "output": "2\n3\n5\n7\n11\n13\n17\n19\n23\n9",
+      "timeLimit": 1000,
+      "showInput": true,
+      "showOutput": true,
+      "inputType": "userinput",
+      "outputType": "userinput",
+      "freopenInputFile": "",
+      "freopenOutputFile": "",
+      "result": {
+        "status": "AC",
+        "output": "2\r\n3\r\n5\r\n7\r\n11\r\n13\r\n17\r\n19\r\n23\r\n9\r\n",
+        "expectedOutput": "2\n3\n5\n7\n11\n13\n17\n19\n23\n9",
+        "stderr": "",
+        "outputSizeBytes": 35,
+        "outputExpanded": false,
+        "time": 189,
+        "memoryBytes": 0,
+        "usedSpj": false,
+        "spjOutput": ""
+      }
+    },
+    {
+      "id": 2,
+      "title": "样例 2",
+      "input": "5",
+      "output": "2\n3\n2",
+      "timeLimit": 1000,
+      "showInput": true,
+      "showOutput": true,
+      "inputType": "userinput",
+      "outputType": "userinput",
+      "freopenInputFile": "",
+      "freopenOutputFile": "",
+      "result": {
+        "status": "RE",
+        "output": "Error invoking remote method 'run-program': Error: spawn UNKNOWN",
+        "time": 0,
+        "outputExpanded": false,
+        "outputSizeBytes": 64
+      }
+    },
+    {
+      "id": 3,
+      "title": "样例 3",
+      "input": "11",
+      "output": "2\n3\n5\n3",
+      "timeLimit": 1000,
+      "showInput": true,
+      "showOutput": true,
+      "inputType": "userinput",
+      "outputType": "userinput",
+      "freopenInputFile": "",
+      "freopenOutputFile": "",
+      "result": {
+        "status": "RE",
+        "output": "Error invoking remote method 'run-program': Error: spawn UNKNOWN",
+        "time": 0,
+        "outputExpanded": false,
+        "outputSizeBytes": 64
+      }
+    }
+  ],
+  "globalSettings": {
+    "useTestlib": true,
+    "spjPath": "",
+    "freopenInputFile": "",
+    "freopenOutputFile": "",
+    "defaultTimeLimit": 1000
+  }
+}

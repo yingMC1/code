@@ -1,0 +1,36 @@
+{
+  "samples": [
+    {
+      "id": 1,
+      "title": "样例 1",
+      "input": "10 3\n0 2 6\n1 1 8\n0 5 7\n",
+      "output": "3\n2\n",
+      "timeLimit": 1000,
+      "showInput": true,
+      "showOutput": true,
+      "inputType": "userinput",
+      "outputType": "userinput",
+      "freopenInputFile": "",
+      "freopenOutputFile": "",
+      "result": {
+        "status": "WA",
+        "output": "3\r\n3\r\n",
+        "expectedOutput": "3\n2\n",
+        "stderr": "",
+        "outputSizeBytes": 6,
+        "outputExpanded": false,
+        "time": 284,
+        "memoryBytes": 0,
+        "usedSpj": false,
+        "spjOutput": ""
+      }
+    }
+  ],
+  "globalSettings": {
+    "useTestlib": true,
+    "spjPath": "",
+    "freopenInputFile": "",
+    "freopenOutputFile": "",
+    "defaultTimeLimit": 1000
+  }
+}

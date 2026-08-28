@@ -1,0 +1,61 @@
+{
+  "samples": [
+    {
+      "id": 1,
+      "title": "样例 1",
+      "input": "10\n1 1\n1 61\n2 1\n2 60\n3 1\n3 2\n3 3\n3 4\n4 1\n4 99999\n",
+      "output": "6\n",
+      "timeLimit": 1000,
+      "showInput": true,
+      "showOutput": true,
+      "inputType": "userinput",
+      "outputType": "userinput",
+      "freopenInputFile": "",
+      "freopenOutputFile": "",
+      "result": {
+        "status": "AC",
+        "output": "6",
+        "expectedOutput": "6\n",
+        "stderr": "",
+        "outputSizeBytes": 1,
+        "outputExpanded": false,
+        "time": 225,
+        "memoryBytes": 0,
+        "usedSpj": false,
+        "spjOutput": ""
+      }
+    },
+    {
+      "id": 2,
+      "title": "样例 2",
+      "input": "10\n1 1\n1 61\n2 1\n2 60\n3 1\n3 2\n3 3\n3 4\n4 1\n4 99999\n",
+      "output": "6\n",
+      "timeLimit": 1000,
+      "showInput": true,
+      "showOutput": true,
+      "inputType": "userinput",
+      "outputType": "userinput",
+      "freopenInputFile": "",
+      "freopenOutputFile": "",
+      "result": {
+        "status": "AC",
+        "output": "6",
+        "expectedOutput": "6\n",
+        "stderr": "",
+        "outputSizeBytes": 1,
+        "outputExpanded": false,
+        "time": 208,
+        "memoryBytes": 0,
+        "usedSpj": false,
+        "spjOutput": ""
+      }
+    }
+  ],
+  "globalSettings": {
+    "useTestlib": false,
+    "spjPath": "",
+    "freopenInputFile": "",
+    "freopenOutputFile": "",
+    "defaultTimeLimit": 1000
+  }
+}
