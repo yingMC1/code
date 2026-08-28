@@ -1,0 +1,9 @@
+{
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "cpp": "D:\\mingw64\\bin\\g++.exe -std=c++23 -O2 -static -g \"$dir$fileName\" -o \"$dir$fileNameWithoutExt.exe\""
+  },
+  "code-runner.fileDirectoryAsCwd": false,
+  "code-runner.saveAllFilesBeforeRun": true
+}

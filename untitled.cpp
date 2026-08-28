@@ -20,36 +20,33 @@ int main()
         for (int i = 0; i < n; i++)
             cin >> s[i];
         int ans = n;
-        for (int first = 0; first < 2; first++)
+        for (int f = 0; f < 2; f++)
         {
+            int dp[2] = {n + 1, n + 1};
+            dp[f] = 0;
+            for (int j = 1; j < n; j++)
             {
-                dp[first] = 0;
-                dp[i] = 0;
-                for (int j = 1; j < n; j++)
+                int f[2] = {n + 1, n + 1};
+                for (int k = 0; k < 2; k++)
                 {
-                    int f[2] = {n + 1, n + 1};
-                    for (int k = 0; k < 2; k++)
+                    for (int cnt = 0; cnt < 2; cnt++)
                     {
-                        for (int cnt = 0; cnt < 2; cnt++)
-                        {
-                            char r = k ? s[j - 1][0] : s[j - 1][1];
-                            char l = cnt ? s[j][1] : s[j][0];
-                            f[cnt] = min(f[cnt],
-                                         dp[k] + (r != l));
-                        }
+                        char r = k ? s[j - 1][0] : s[j - 1][1];
+                        char l = cnt ? s[j][1] : s[j][0];
+                        f[cnt] = min(f[cnt], dp[k] + (r != l));
                     }
-                    dp[0] = f[0];
-                    dp[1] = f[1];
                 }
-                for (int last = 0; last < 2; last++)
-                {
-                    char r = last ? s[n - 1][0] : s[n - 1][1];
-                    char l = first ? s[0][1] : s[0][0];
-                    ans = min(ans, dp[last] + (r != l));
-                    ans = min(ans, dp[i] + (r != l));
-                }
+                dp[0] = f[0];
+                dp[1] = f[1];
             }
-            cout << ans << endl;
+            for (int t = 0; t < 2; t++)
+            {
+                char r = t ? s[n - 1][0] : s[n - 1][1];
+                char l = f ? s[0][1] : s[0][0];
+                ans = min(ans, dp[t] + (r != l));
+            }
         }
-        return 0;
+        cout << ans << endl;
     }
+    return 0;
+}
