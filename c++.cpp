@@ -14,22 +14,20 @@ int main(){
     cin.tie(nullptr);
     cin >> n >> c >> y >> s;
     int len = s.size();
-    for (int i = 0; i < len; i++){
-        if (s[i] ==  'H'){
+    for(int i = 0; i < len; i++){
+        if(s[i] == 'H'){
             a[++tot] = cnt;
             cnt = 0;
         }
-        else {
-            cnt++;
-        }
+        else cnt++;
     }
     if(tot == 0)ans = 1;
     for(int i = 1; i <= tot; i++){
         int l = (y + a[i]) * 2 + 1;
-        if(l > c)l = c;
+        if(l > c) l = c;
         int r = y * 2 - a[i];
-        if(r < 0)r = 0;
-        if(l - r + 1 > 0)ans += l - r + 1;
+        if(r < 0) r = 0;
+        if(l - r + 1 > 0) ans += l - r + 1;
     }
     cout << ans << endl;
     return 0;
