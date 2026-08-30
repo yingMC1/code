@@ -3,29 +3,103 @@
 #define endl '\n'
 using namespace std;
 using i64 = long long;
-const int N = 1e6 + 5;
+const int N = 5e5 + 5;
+const int INF = 1e9;
 
-int a[] = {5160, 9191, 6410, 4657, 7492, 1531, 8854, 1253, 4520, 9231, 1266, 4801, 3484, 4323, 5070, 1789, 2744, 5959, 9426, 4433, 4404, 5291, 2470, 8533, 7608, 2935, 8922, 5273, 8364, 8819, 7374, 8077, 5336, 8495, 5602, 6553, 3548, 5267, 9150, 3309};
-long long sum, mx, ans;
-bool dp[N];
+int n, m, a[N], tree[N << 2], mi[N << 2];
 
-int main(){
+void up(int x) {
+    int lc = x * 2, rc = x * 2 + 1;
+    if (tree[lc] < tree[rc]) {
+        tree[x] = tree[lc];
+        mi[x] = mi[lc];
+    } else if (tree[lc] > tree[rc]) {
+        tree[x] = tree[rc];
+        mi[x] = mi[rc];
+    } else {
+        tree[x] = tree[lc];
+        mi[x] = min(mi[lc], mi[rc]);
+    }
+}
+
+void build(int x, int l, int r) {
+    if (l == r) {
+        tree[x] = a[l];
+        mi[x] = l;
+        return;
+    }
+    int mid = l + r >> 1;
+    build(x * 2, l, mid);
+    build(x * 2 + 1, mid + 1, r);
+    up(x);
+}
+
+void update(int x, int l, int r, int p, int w) {
+    if (l == r) {
+        tree[x] = a[l] = w;
+        mi[x] = p;
+        return;
+    }
+    int mid = l + r >> 1;
+    if (p <= mid)
+        update(x * 2, l, mid, p, w);
+    else
+        update(x * 2 + 1, mid + 1, r, p, w);
+    up(x);
+}
+
+int weizhi(int x, int l, int r, int pos) {
+    if (l == r)
+        return tree[x];
+    int mid = l + r >> 1;
+    if (pos <= mid)
+        return weizhi(x * 2, l, mid, pos);
+    else
+        return weizhi(x * 2 + 1, mid + 1, r, pos);
+}
+
+int query(int x, int l, int r, int ql, int qr) {
+    if (ql <= l && r <= qr) {
+        return mi[x];
+    }
+    int mid = l + r >> 1;
+    int ans = -INF;
+    int res = INF;
+    if (ql <= mid) {
+        int ti = query(x * 2, l, mid, ql, qr);
+        int t = weizhi(1, 1, n, ti);
+        if (t < res || (t == res && ti < ans)) {
+            res = t;
+            ans = ti;
+        }
+    }
+    if (qr > mid) {
+        int ti = query(x * 2 + 1, mid + 1, r, ql, qr);
+        int t = weizhi(1, 1, n, ti);
+        if (t < res || (t == res && ti < ans)) {
+            res = t;
+            ans = ti;
+        }
+    }
+    return ans;
+}
+
+int main() {
     ios::sync_with_stdio(false);
     cout.tie(nullptr);
     cin.tie(nullptr);
-    for(int i : a)sum += i;
-    sum /= 2;
-    dp[0] = 1;
-    for (int k : a)
-        for (int i = sum; i >= k - 1; i--)
-            if (dp[i - k])dp[i] = 1;
-    for (int i = sum; i >= 0; i--){
-        if (dp[i]){
-            mx = i;
-            break;
-        }
+    cin >> n >> m;
+    for (int i = 1; i <= n; i++)
+        cin >> a[i];
+    build(1, 1, n);
+    for (int i = 1; i <= m; i++) {
+        char c;
+        int l, r;
+        cin >> c >> l >> r;
+        if (c == 'C')
+            update(1, 1, n, l, r);
+        else
+            cout << query(1, 1, n, l, r) << endl;
     }
-    ans = mx * (sum * 2 - mx);
-    cout << ans << endl;
     return 0;
 }
