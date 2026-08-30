@@ -10,9 +10,9 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe",
-        "-lstdc++"
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
       ],
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "build",
         "isDefault": false
