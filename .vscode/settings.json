@@ -1,0 +1,33 @@
+{
+  // ========== clangd 配置 ==========
+  "clangd.path": "clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+    "--completion-style=detailed",
+    "--function-arg-placeholders",
+    "--compile-commands-dir=${workspaceFolder}"
+  ],
+  "clangd.fallbackFlags": [
+    "-std=c++23",
+    "-I D:/mingw/include",
+    "-I D:/mingw/lib/gcc/x86_64-w64-mingw32/16.1.0/include",
+    "-I D:/mingw/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++",
+    "-I D:/mingw/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32"
+  ],
+
+  // ========== 禁用 C/C++ 插件的 IntelliSense（避免冲突） ==========
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "C_Cpp.autocomplete": "disabled",
+  "C_Cpp.errorSquiggles": "disabled",
+  "C_Cpp.enhancedColorization": "disabled",
+
+  // ========== 编辑器设置 ==========
+  "editor.formatOnSave": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "files.associations": {
+    "*.cpp": "cpp",
+    "*.h": "cpp"
+  }
+}
