@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "调试 C++ (cppdbg)",
+      "name": "调试 C++",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -12,7 +12,7 @@
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "D:\\mingw\\bin\\gdb.exe",
+      "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",
       "setupCommands": [
         {
           "description": "为gdb启用整齐打印",
@@ -20,7 +20,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "C++ 编译 (调试版 - 无优化)"
+      "preLaunchTask": "C++ 编译 (调试版)"
     }
   ]
 }

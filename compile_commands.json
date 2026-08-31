@@ -1,7 +1,7 @@
 [
   {
     "directory": "D:/code",
-    "command": "D:/mingw/bin/g++.exe -std=c++23 -O2 -Wall -Wextra -Wpedantic -I D:/mingw/include -I D:/mingw/lib/gcc/x86_64-w64-mingw32/16.1.0/include -I D:/mingw/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++ -c main.cpp -o main.o",
+    "command": "D:/mingw64/bin/g++.exe -std=c++23 -O2 -Wall -Wextra -Wpedantic -I D:/mingw64/include -I D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include -I D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++ -c main.cpp -o main.o",
     "file": "main.cpp"
   }
 ]

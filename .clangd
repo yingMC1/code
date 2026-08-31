@@ -5,12 +5,12 @@ CompileFlags:
     - -Wall
     - -Wextra
     - -Wpedantic
-    - -I"D:/mingw/include"
-    - -I"D:/mingw/lib/gcc/x86_64-w64-mingw32/16.1.0/include"
-    - -I"D:/mingw/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++"
-    - -I"D:/mingw/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32"
-    - -I"D:/mingw/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward"
-  Compiler: D:/mingw/bin/g++.exe
+    - -I"D:/mingw64/include"
+    - -I"D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include"
+    - -I"D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++"
+    - -I"D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32"
+    - -I"D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward"
+  Compiler: D:/mingw64/bin/g++.exe
 
 Diagnostics:
   UnusedIncludes: Strict

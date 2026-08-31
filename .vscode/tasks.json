@@ -4,7 +4,7 @@
     {
       "label": "C++ 编译 (O2优化)",
       "type": "shell",
-      "command": "D:\\mingw\\bin\\g++.exe",
+      "command": "D:\\mingw64\\bin\\g++.exe",
       "args": [
         "${file}",
         "-O2",
@@ -56,9 +56,9 @@
       "problemMatcher": []
     },
     {
-      "label": "C++ 编译 (调试版 - 无优化)",
+      "label": "C++ 编译 (调试版)",
       "type": "shell",
-      "command": "D:\\mingw\\bin\\g++.exe",
+      "command": "D:\\mingw64\\bin\\g++.exe",
       "args": [
         "${file}",
         "-o",
