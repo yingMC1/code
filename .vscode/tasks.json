@@ -8,6 +8,7 @@
         "-fdiagnostics-color=always",
         "-std=c++23",
         "-O2",
+        "-static",
         "-g",
         "${file}",
         "-o",
