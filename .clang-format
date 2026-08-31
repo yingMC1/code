@@ -3,14 +3,14 @@ IndentWidth: 4
 UseTab: Never
 TabWidth: 4
 BreakBeforeBraces: Attach
-SpaceBeforeParens: Never
+SpaceBeforeParens: ControlStatements # for (...) 加空格
 PointerAlignment: Left
 BreakAfterReturnType: None
 AllowShortFunctionsOnASingleLine: All
 ColumnLimit: 100
-AlignConsecutiveAssignments: true
-AlignConsecutiveDeclarations: true
+AlignConsecutiveAssignments: false # 等号不对齐
+AlignConsecutiveDeclarations: false # 声明等号不对齐
 SortIncludes: true
-AllowShortIfStatementsOnASingleLine: false
-AllowShortLoopsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: true # if 单行
+AllowShortLoopsOnASingleLine: false # for/while 不单行
 AllowShortBlocksOnASingleLine: false
