@@ -3,33 +3,16 @@
 #define endl '\n'
 using namespace std;
 using i64 = long long;
-const int N = 2e3 + 5;
+const int N = 2e5 + 5;
 
-int n, m;
-string x;
-i64 sum;
-bool f, t1[N][N];
+int n, q, a[N], b[N], cnt;
 
 int main() {
     ios::sync_with_stdio(false);
     cout.tie(nullptr);
     cin.tie(nullptr);
-    cin >> n >> m >> x;
+    cin >> n >> q;
     for (int i = 1; i <= n; i++)
-        for (int j = 1; j <= m; j++) {
-            string t;
-            cin >> t;
-            if (t == x)
-                t1[i][j] = true;
-            else if (t == "L")
-                f = true;
-        }
-    for (int i = 1; i <= n; i++)
-        for (int j = 1; j <= m; j++) {
-            int t;
-            cin >> t;
-            if (t1[i][j] || f) sum += t;
-        }
-    cout << sum;
+        cin >> a[i];
     return 0;
 }
