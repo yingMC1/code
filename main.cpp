@@ -4,8 +4,9 @@
 using namespace std;
 using i64 = long long;
 
-i64 n, tot, cnt, ans, sum;
+i64 n, x, tot, cnt, ans, sum;
 map<i64, int> mp;
+char c;
 
 int main() {
     ios::sync_with_stdio(false);
@@ -13,16 +14,15 @@ int main() {
     cin.tie(nullptr);
     cin >> n;
     for (int i = 0; i < n; i++) {
-        i64 x;
-        char c;
         cin >> x >> c;
-        cnt = c == 'L' ? tot - x : tot + x;
-        i64 l = min(tot, cnt);
-        i64 r = max(tot, cnt);
+        i64 cnt1 = c == 'L' ? cnt - x : cnt + x;
+        i64 l = min(cnt, cnt1);
+        i64 r = max(cnt, cnt1);
         if (l != r) {
             mp[l]++;
             mp[r]--;
         }
+        cnt = cnt1;
     }
     auto b = mp.begin();
     while (b != mp.end()) {
