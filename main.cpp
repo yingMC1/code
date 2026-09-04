@@ -4,7 +4,7 @@
 using namespace std;
 using i64 = long long;
 
-int n;
+i64 n, tot, cnt, ans, sum;
 map<i64, int> mp;
 
 int main() {
@@ -12,23 +12,18 @@ int main() {
     cout.tie(nullptr);
     cin.tie(nullptr);
     cin >> n;
-    i64 tot = 0;
     for (int i = 0; i < n; i++) {
         i64 x;
         char c;
         cin >> x >> c;
-        i64 cnt = c == 'L' ? tot - x : tot + x;
+        cnt = c == 'L' ? tot - x : tot + x;
         i64 l = min(tot, cnt);
         i64 r = max(tot, cnt);
         if (l != r) {
             mp[l]++;
             mp[r]--;
         }
-        tot = cnt;
     }
-    tot = 0;
-    i64 ans = 0;
-    i64 sum = 0;
     auto b = mp.begin();
     while (b != mp.end()) {
         sum += b->second;
