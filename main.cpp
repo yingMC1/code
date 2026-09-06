@@ -3,41 +3,33 @@
 #define endl '\n'
 using namespace std;
 using i64 = long long;
+const int N = 1e5 + 5;
 
-i64 n, x, tot, cnt, ans, sum;
-map<i64, int> mp;
-char c;
+int T, n, a, b, cha[N];
+i64 sum;
 
 int main() {
     ios::sync_with_stdio(false);
     cout.tie(nullptr);
     cin.tie(nullptr);
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> x >> c;
-        i64 cnt1 = c == 'L' ? cnt - x : cnt + x;
-        i64 l = min(cnt, cnt1);
-        i64 r = max(cnt, cnt1);
-        if (l != r) {
-            mp[l]++;
-            mp[r]--;
+    cin >> T;
+    for (int i = 1; i <= T; i++) {
+        sum = 0;
+        cin >> n;
+        for (int i = 1; i <= n; i++) {
+            cin >> a >> b;
+            cha[i] = a - b;
+            sum += a;
         }
-        cnt = cnt1;
-    }
-    auto b = mp.begin();
-    while (b != mp.end()) {
-        sum += b->second;
-        auto net = std::next(b);
-        if (net != mp.end()) {
-            i64 l = net->first - b->first;
-            if (sum > tot) {
-                tot = sum;
-                ans = l;
-            } else if (sum == tot)
-                ans += l;
+        sort(cha + 1, cha + n + 1);
+        for (int i = n; i >= n / 2; i--) {
+            sum -= cha[i];
         }
-        b = net;
+        for (int i = 1; i <= n; i++) {
+            cout << cha[i] << ' ';
+        }
+        cout << endl;
+        cout << sum << endl;
     }
-    cout << tot << endl << ans << endl;
     return 0;
 }
