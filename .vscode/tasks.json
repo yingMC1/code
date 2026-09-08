@@ -4,7 +4,7 @@
     {
       "type": "cppbuild",
       "label": "C/C++: g++.exe 刷题专用",
-      "command": "D:\\mingw64\\bin\\g++.exe",
+      "command": "g++.exe",
       "args": [
         "-O2",
         "-g",
@@ -22,7 +22,7 @@
     {
       "type": "cppbuild",
       "label": "C/C++: g++.exe 生成活动文件",
-      "command": "D:\\mingw64\\bin\\g++.exe",
+      "command": "g++.exe",
       "args": [
         "-fdiagnostics-color=always",
         "-std=c++23",
@@ -43,7 +43,7 @@
     {
       "type": "cppbuild",
       "label": "EGE: g++.exe 生成活动文件",
-      "command": "D:\\mingw64\\bin\\g++.exe",
+      "command": "g++.exe",
       "args": [
         "-fdiagnostics-color=always",
         "-std=c++17",
