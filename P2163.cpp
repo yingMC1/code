@@ -5,7 +5,7 @@ using namespace std;
 using i64 = long long;
 const int N = 5e5 + 5;
 
-int n, m, tree[N], b[N * 5], tot, ans[N];
+int n, m, tree[N], b[N * 6], tot, ans[N];
 
 struct I {
     int x, y;
@@ -13,10 +13,10 @@ struct I {
 
 struct J {
     int x1, x2, h, op, w;
-} c[N];
+} c[N * 2];
 
 void update(int x, int w) {
-    while (x <= n) {
+    while (x <= tot) {
         tree[x] += w;
         x += lowbit(x);
     }
@@ -51,6 +51,7 @@ int main() {
         b[++tot] = c[i].x1;
         b[++tot] = c[i].x2;
         b[++tot] = c[i].h;
+        b[++tot] = c[i + m].h;
     }
     sort(c + 1, c + m * 2 + 1, [&](J x, J y) { return x.h < y.h; });
     sort(b + 1, b + tot + 1);
