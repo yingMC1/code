@@ -50,7 +50,7 @@ int main() {
     }
     sort(b + 1, b + tot + 1);
     tot = unique(b + 1, b + tot + 1) - (b + 1);
-    sort(a + 1, a + tot + 1, cmp);
+    sort(a + 1, a + n * 2 + 1, cmp);
     int last = a[1].h;
     for (int i = 1; i <= n * 2; i++) {
         a[i].x1 = lower_bound(b + 1, b + tot + 1, a[i].x1) - b;
