@@ -10,7 +10,7 @@ i64 b[N * 3], tree[N * 4], tag[N * 4];
 
 struct I {
     i64 x, y, l;
-};
+} a[N * 2];
 
 void update(int p, int l, int r, int ql, int qr, i64 w) {
     if (ql > r || qr < l) return;
@@ -34,17 +34,16 @@ int main() {
     for (int i = 1; i <= t; i++) {
         tot = 0;
         cin >> n >> W >> H;
-        vector<I> a;
         for (int i = 1; i <= n; i++) {
             cin >> x >> y >> l;
             b[++tot] = y - H;
             b[++tot] = y;
-            a.push_back({x - W, y, l});
-            a.push_back({x, y, -l});
+            a[i] = {x - W, y, l};
+            a[i + n] = {x, y, -l};
         }
         sort(b + 1, b + tot + 1);
         tot = unique(b + 1, b + tot + 1) - (b + 1);
-        sort(a.begin(), a.end(), [&](I x, I y) { return x.x < y.x; });
+        sort(a + 1, a + n * 2 + 1, [&](I x, I y) { return x.x < y.x; });
         fill(tree, tree + 4 * N, 0);
         fill(tag, tag + 4 * N, 0);
 
