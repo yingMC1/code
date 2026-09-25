@@ -9,11 +9,11 @@ int n, a[N];
 
 int main() {
     cin >> n;
-    for (int i = 1; i <= n; i++)
+    multiset<int> s;
+    for (int i = 1; i <= n; i++) {
         cin >> a[i];
-    sort(a + 1, a + n + 1);
-    for (int i = 1; i <= n - 2; i++) {
-        cout << a[i] << endl;
+        s.insert(a[i]);
+        if (i >= 3) cout << *prev(s.end(), 3) << endl;
     }
     return 0;
 }
