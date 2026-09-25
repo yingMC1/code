@@ -19,10 +19,7 @@
         "cwd": "${fileDirname}"
       },
       "problemMatcher": ["$gcc"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
+      "group": "build",
       "detail": "调试器生成的任务。"
     },
     {
@@ -52,10 +49,7 @@
         "cwd": "${fileDirname}"
       },
       "problemMatcher": ["$gcc"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
+      "group": "build",
       "detail": "EGE 绘图库编译任务。"
     }
   ]
